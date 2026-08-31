@@ -7,9 +7,9 @@ namespace Core.Model
         public byte Score { get; set; }
         public string Components { get; set; }
         public decimal MarketMedianUsd { get; set; }
-        public string MatchScore { get; set; }
+        public string MatchSource { get; set; }
         public int FormulaVersion { get; set; }
-        public TimeSpan ComputeAt { get; set; }
+        public DateTimeOffset ComputeAt { get; set; }
 
         public Listings Listings { get; set; }
     }

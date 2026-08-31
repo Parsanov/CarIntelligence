@@ -7,5 +7,7 @@ namespace Core.Model
         public Guid Id { get; set; }
         public string Code { get; set; }
         public string Kind { get; set; }
+
+        public List<SuspensionsIssues> MyProperty { get; set; }
     }
 }
