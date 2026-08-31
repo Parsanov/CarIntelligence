@@ -10,5 +10,8 @@ namespace Core.Model
         public string Body { get; set; }
         public string ModelVersion { get; set; }
         public DateTimeOffset GeneratedAt { get; set; }
+
+        public Guid PowertrainsId { get; set; }
+        public Powertrains Powertrains { get; set; }
     }
 }

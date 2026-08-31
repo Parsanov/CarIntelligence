@@ -8,6 +8,6 @@ namespace Core.Model
         public string Code { get; set; }
         public string Kind { get; set; }
 
-        public List<SuspensionsIssues> MyProperty { get; set; }
+        public List<SuspensionsIssues> SuspensionsIssues { get; set; }
     }
 }

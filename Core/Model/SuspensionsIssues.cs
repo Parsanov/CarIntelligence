@@ -9,6 +9,10 @@
         public int TypicalMileageKm { get; set; }
         public string HowToCheck { get; set; }
 
+
+        public Suspensions Suspensions { get; set; }
+        public Guid SuspensionsId { get; set; }
+
         public DateTimeOffset CreatedAt { get; set; }
     }
 }
