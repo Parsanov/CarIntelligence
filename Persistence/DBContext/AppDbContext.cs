@@ -10,7 +10,6 @@ namespace Persistence.DBContext
     {
         public AppDbContext(DbContextOptions options) : base(options) { }
 
-
         public DbSet<Analyses> Analyses { get; set; }
         public DbSet<BodyIssues> BodyIssues { get; set; }
         public DbSet<EngineIssues> EngineIssues { get; set; }
@@ -24,6 +23,7 @@ namespace Persistence.DBContext
         public DbSet<Makes> Makes { get; set; }
         public DbSet<Generations> Generations { get; set; }
         public DbSet<Listings> Listings { get; set; }
+        public DbSet<Explanations> Explanations { get; set; }
 
     }
 }
