@@ -9,8 +9,6 @@ namespace Core.Model
         public string ScoreBand { get; set; }
         public string Body { get; set; }
         public string ModelVersion { get; set; }
-        public TimeSpan GeneratedAt { get; set; }
-
-
+        public DateTimeOffset GeneratedAt { get; set; }
     }
 }

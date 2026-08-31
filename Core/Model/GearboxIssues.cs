@@ -15,6 +15,7 @@ namespace Core.Model
         public short AppliesYearTo { get; set; }
 
 
-        public GearBox GearBoxId { get; set; }
+        public GearBox GearBox { get; set; }
+        public Guid GearBoxId { get; set; }
     }
 }

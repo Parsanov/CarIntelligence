@@ -11,6 +11,7 @@
         public short AppliesYearTo { get; set; }
         public string HowToCheck { get; set; }
 
-        public Engine EnginesId { get; set; }
+        public Engine Engines { get; set; }
+        public Guid EnginesId { get; set; }
     }
 }

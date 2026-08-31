@@ -12,5 +12,6 @@ namespace Core.Model
         public DateTimeOffset ComputeAt { get; set; }
 
         public Listings Listings { get; set; }
+        public Guid ListingsId { get; set; }
     }
 }

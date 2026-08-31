@@ -12,6 +12,7 @@ namespace Core.Model
         public short Severity { get; set; }
         public string Zone { get; set; }
 
-        public Generations GenerationsId { get; set; }
+        public Generations Generations { get; set; }
+        public Guid GenerationsId { get; set; }
     }
 }

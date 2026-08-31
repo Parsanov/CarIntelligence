@@ -12,6 +12,8 @@ namespace Core.Model
         public DateTime YearTo { get; set; }
 
         public Models Models { get; set; }
+        public Guid ModelsId { get; set; }
+
         public List<BodyIssues> BodyIssues { get; set; }
     }
 }
