@@ -11,8 +11,6 @@ namespace Core.Model
         public short? AppliesYearFrom { get; set; }
         public short? AppliesYearTo { get; set; }
         public string? HowToCheck { get; set; }
-        public int? RepairCostUahFrom { get; set; }
-        public int? RepairCostUahTo { get; set; }
         public string? SourceUrl { get; set; }
         public bool Verified { get; set; }
         public DateTimeOffset CreatedAt { get; set; }

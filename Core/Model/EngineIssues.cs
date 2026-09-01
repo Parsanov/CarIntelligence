@@ -20,9 +20,6 @@ namespace Core.Model
         /// <summary>Що робити при огляді — головне, що людина забере з собою.</summary>
         public string? HowToCheck { get; set; }
 
-        public int? RepairCostUahFrom { get; set; }
-        public int? RepairCostUahTo { get; set; }
-
         /// <summary>Джерело, щоб через місяць перевірити дивну цифру.</summary>
         public string? SourceUrl { get; set; }
 
