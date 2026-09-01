@@ -1,8 +1,5 @@
-﻿using Core.Model;
+using Core.Model;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Persistence.DBContext
 {
@@ -10,20 +7,30 @@ namespace Persistence.DBContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Analyses> Analyses { get; set; }
-        public DbSet<BodyIssues> BodyIssues { get; set; }
-        public DbSet<EngineIssues> EngineIssues { get; set; }
-        public DbSet<Powertrains> Powertrains { get; set; }
-        public DbSet<Suspensions> Suspensions { get; set; }
-        public DbSet<SuspensionsIssues> SuspensionsIssues { get; set; }
-        public DbSet<Engine> Engines { get; set; }
-        public DbSet<GearBox> GearBoxes { get; set; }
-        public DbSet<GearboxIssues> GearboxIssues { get; set; }
-        public DbSet<Models> Models { get; set; }
-        public DbSet<Makes> Makes { get; set; }
-        public DbSet<Generations> Generations { get; set; }
-        public DbSet<Listings> Listings { get; set; }
-        public DbSet<Explanations> Explanations { get; set; }
+        // Довідник — наповнюється руками, майже не змінюється
+        public DbSet<Makes> Makes => Set<Makes>();
+        public DbSet<Models> Models => Set<Models>();
+        public DbSet<Generations> Generations => Set<Generations>();
+        public DbSet<Engine> Engines => Set<Engine>();
+        public DbSet<GearBox> GearBoxes => Set<GearBox>();
+        public DbSet<Suspensions> Suspensions => Set<Suspensions>();
+        public DbSet<Powertrains> Powertrains => Set<Powertrains>();
 
+        // Знання — головний актив
+        public DbSet<EngineIssues> EngineIssues => Set<EngineIssues>();
+        public DbSet<GearboxIssues> GearboxIssues => Set<GearboxIssues>();
+        public DbSet<SuspensionsIssues> SuspensionsIssues => Set<SuspensionsIssues>();
+        public DbSet<BodyIssues> BodyIssues => Set<BodyIssues>();
+
+        // Ринок і вивід
+        public DbSet<Listings> Listings => Set<Listings>();
+        public DbSet<Analyses> Analyses => Set<Analyses>();
+        public DbSet<Explanations> Explanations => Set<Explanations>();
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Підхоплює всі IEntityTypeConfiguration з цієї збірки
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        }
     }
 }
